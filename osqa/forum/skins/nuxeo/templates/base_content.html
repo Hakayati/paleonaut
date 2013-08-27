@@ -11,13 +11,15 @@
         {% if settings.GOOGLE_SITEMAP_CODE %}
         <meta name="google-site-verification" content="{{ settings.GOOGLE_SITEMAP_CODE }}" />
         {% endif %}
-        <link href="http://www.nuxeo.com/var/storage/community/favicon.png" type="image/png" rel="icon">
-	<link media="screen" type="text/css" href="http://www.nuxeo.com/var/storage/community/community_common.css" rel="stylesheet">
+        <link href="{% media "/media/images/caveman.ico" %}" type="image/png" rel="icon">
+	    <link media="screen" type="text/css" href="http://www.nuxeo.com/var/storage/community/community_common.css" rel="stylesheet">
         <link href="{% media  "/media/style/style.css" %}" rel="stylesheet" type="text/css" />
 	{% if settings.USE_CUSTOM_CSS|or_preview:request %}
         <link href="{% url custom_css %}" rel="stylesheet" type="text/css" />
         {% endif %}
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css" />
+        <link href='http://fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+
         {% block forestyle %}{% endblock %}
         <script src="http://www.google.com/jsapi" type="text/javascript"></script>
         <script type="text/javascript">
@@ -69,41 +71,41 @@
         {% loadregistry head_content %}{% endloadregistry %}
     </head>
     <body>
-        <div class="notify" style="display:none">
-            {% autoescape off %}
-                {% if user_messages %}
-                    {% for message in user_messages %}
-                          <p>{{ message }}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endautoescape %}
-            <a id="close-notify" onclick="notify.close(true)">&times;</a>
-        </div>
-        {% if settings.USE_CUSTOM_HEADER|or_preview:request %}
-            <div id="custom_header">
-                {{ settings.CUSTOM_HEADER|or_preview:request|static_content:settings.CUSTOM_HEADER_RENDER_MODE }}
+        <div id="side"></div>
+        <div id="content">
+            <div class="notify" style="display:none">
+                {% autoescape off %}
+                    {% if user_messages %}
+                        {% for message in user_messages %}
+                              <p>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endautoescape %}
+                <a id="close-notify" onclick="notify.close(true)">&times;</a>
             </div>
-        {% endif %}
-        {% include "header.html" %}
-        {% block page_center %}
-        <div id="wrapper">
-            <div id="background">
-                <img src="{% media  "/media/img/caveman.png" %}" />
-            </div>
-            <div id="room">
-                <div id="CAFull">
-                    {% block content%}
-                    {% endblock%}
+            {% if settings.USE_CUSTOM_HEADER|or_preview:request %}
+                <div id="custom_header">
+                    {{ settings.CUSTOM_HEADER|or_preview:request|static_content:settings.CUSTOM_HEADER_RENDER_MODE }}
+                </div>
+            {% endif %}
+            {% include "header.html" %}
+            {% block page_center %}
+            <div id="wrapper">
+                <div id="room">
+                    <div id="CAFull">
+                        {% block content%}
+                        {% endblock%}
 
+                    </div>
+                    <div id="tail" style="clear:both;">
+                        {% block tail %}
+                        {% endblock %}
+                    </div>
                 </div>
-                <div id="tail" style="clear:both;">
-                    {% block tail %}
-                    {% endblock %}
-                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-        </div>
         {% endblock %}
+        </div>
         {% if settings.USE_CUSTOM_FOOTER|or_preview:request %}
             {% ifequal settings.CUSTOM_FOOTER_MODE|or_preview:request "above" %}
                 <div id="custom_footer">

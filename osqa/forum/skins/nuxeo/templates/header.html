@@ -1,17 +1,21 @@
 <!-- template header.html -->
 {% load extra_tags ui_registry i18n extra_filters markup %}
-
-  <div id="topBar">  
-    <div id="links">
-            {% loadregistry header_links %}{% endloadregistry %}
-        </div>
-  <div class="clear"></div>
-    </div>
-        {% if settings.USE_ANNOUNCEMENT_BAR|or_preview:request %}
-  <div id="announcement">
-      {{ settings.ANNOUNCEMENT_BAR|or_preview:request|static_content:settings.ANNOUNCEMENT_BAR_RENDER_MODE }}
+<div id="topBar"> 
+  <div id="links">
+    {% loadregistry header_links %}{% endloadregistry %}
   </div>
-  {% endif %}
+</div>
+<div id="paleonaut-home">
+    <span id="title"><a href="/">Paleonaut</a></span>
+    <span id="tagline">Zurück zu den Wurzeln</span>
+</div>
+<div class="clear"></div>
+
+{% if settings.USE_ANNOUNCEMENT_BAR|or_preview:request %}
+<div id="announcement">
+  {{ settings.ANNOUNCEMENT_BAR|or_preview:request|static_content:settings.ANNOUNCEMENT_BAR_RENDER_MODE }}
+</div>
+{% endif %}
 
 <div id="roof">
     <div class="ask"><a id="question" href="{% url ask %}" class="special">{% trans "ask a question" %}</a></div>
