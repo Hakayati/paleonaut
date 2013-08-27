@@ -10,3 +10,4 @@ html5lib==0.90
 psycopg2==2.4.4
 python-openid==2.2.5
 wsgiref==0.1.2
+-e hg+http://bitbucket.org/pagles/django-email-services@f103377432a71be930a988312015d829bf100ef2#egg=django_email_services-dev
