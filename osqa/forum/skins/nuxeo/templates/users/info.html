@@ -1,0 +1,90 @@
+<!-- user_info.html -->
+{% load extra_tags %}
+{% load extra_filters %}
+{% load humanize %}
+{% load smart_if %}
+{% load i18n %}
+{% load markup %}
+{% load user_tags %}
+
+<div id="subheader" class="headUser{% if view_user.is_suspended %} suspended-user{% endif %}">
+    {{view_user.decorated_name}}
+</div>
+<table class="user-info-table">
+    <tr>
+        <td width="180" style="vertical-align:top;text-align:center;">
+            <table width="100%">
+                <tr>
+                    <td>
+                        {% gravatar view_user 128 %}
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="360" style="vertical-align: top;">
+            <table class="user-details">
+		{% if view_user.real_name %}
+                <tr>
+                    <td><b>{{view_user.real_name}}</b></td>
+                </tr>
+                {% endif %}
+                {% if view_user.website %}
+                <tr>
+                    <td><a rel="nofollow" target="_blank" href="{{view_user.website}}">{{view_user.website}}</a></td>
+                </tr>
+                {% endif  %}
+                {% if view_user.location %}
+                <tr>
+                    <td>{{view_user.location}}</td>
+                </tr>
+                {% endif %}
+                {% if view_user.date_of_birth%}
+                <tr>
+                    {% if view_user.date_of_birth.year != 1900%}
+                    <td>{% get_age view_user.date_of_birth %} {% trans "age unit" %}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if can_view_private %}
+                <tr>
+                    <td>
+                        <a href="mailto:{{ view_user.email }}">{{ view_user.email }}</a>
+                        {% if not view_user.email_isvalid %}
+                            ({% trans "not validated" %})
+                            {% ifequal request.user view_user %}
+                                </td></tr><tr><td></td><td><a href="{% url send_validation_email %}">{% trans "Send me a validation link." %}</a>
+                            {% endifequal %}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endif %}
+		<tr>
+		  <td>
+		    {% if not view_user.is_suspended %}
+                            <div class="scoreNumber" id="user-reputation">{{view_user.reputation|intcomma}} {% trans "reputation" %}</div>
+                        {% else %}
+                            <div class="scoreNumber">{% trans "Suspended" %} {{ view_user.suspension.extra.publicmsg }}</div>
+                        {% endif %}
+		  </td>
+		</tr>
+                <tr>
+                    <td class="smallInfo">{% trans "member for" %} {% diff_date view_user.date_joined %}</td>
+                </tr>
+                {% if view_user.last_seen %}
+                <tr>
+                    <td class="smallInfo"><title="{{ view_user.last_activity }}">{% trans "last seen" %} {% diff_date view_user.last_activity %}</td>
+                </tr>
+                {% endif %}
+            </table>
+        </td>
+        <td width="430" style="vertical-align: top;">
+          {% if can_view_private %}{% user_menu request.user view_user %}{% endif %}  
+	  <div class="user-about">
+            {% if view_user.about %}
+                {{view_user.about|markdown}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+</table>
+<!-- end user_info.html -->
