@@ -5116,8 +5116,8 @@ msgid ""
 "involved participant in this community."
 msgstr ""
 "Bitte wählen Sie Ihren Benutzernamen und bestätigen Sie Ihre Email-Adresse. "
-"Eine gültig Email-Adresse ist erforderlich, damit Sie Benachrichtigungen "
-"erhalten können zu Aktivitäten Ihrer Community und selbst daran "
+"Eine gültige Email-Adresse ist erforderlich, damit Sie Benachrichtigungen "
+"erhalten können zu Aktivitäten Ihrer Community, und um selbst daran "
 "teilzunehmen. "
 
 #: forum/skins/default/templates/auth/complete.html:22
