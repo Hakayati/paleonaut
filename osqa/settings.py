@@ -129,5 +129,5 @@ if not DEBUG:
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend',]
 
-EMAIL_BACKEND = 'email_services.backends.PostmarkEmailBackend'
-EMAIL_SERVICES_CLIENT_KEY = '436c11d8-195d-4378-9521-e4e478ac7da6'
+EMAIL_BACKEND = 'postmark.backends.PostmarkBackend'
+POSTMARK_API_KEY = '436c11d8-195d-4378-9521-e4e478ac7da6'

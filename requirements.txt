@@ -3,6 +3,7 @@ Markdown==2.1.1
 South==0.7.3
 distribute==0.6.24
 dj-database-url==0.2.2
+django-postmark==0.1.6
 git+git://github.com/robhudson/django-debug-toolbar.git
 git+git://github.com/dcramer/django-sphinx.git
 gunicorn==0.13.4
@@ -10,4 +11,3 @@ html5lib==0.90
 psycopg2==2.4.4
 python-openid==2.2.5
 wsgiref==0.1.2
--e hg+http://bitbucket.org/pagles/django-email-services@f103377432a71be930a988312015d829bf100ef2#egg=django_email_services-dev
