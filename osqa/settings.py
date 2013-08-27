@@ -104,6 +104,7 @@ INSTALLED_APPS = [
     'django.contrib.markup',
     'forum',
     'gunicorn',
+    'postmark',
 ]
 
 if DEBUG:
