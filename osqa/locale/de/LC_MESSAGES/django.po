@@ -5165,7 +5165,7 @@ msgstr " %(prefix)s Ihr E-Mail-Validierungs link %(app_name)s"
 #: forum/skins/fresh/templates/auth/mail_validation.html:14
 #: forum/skins/nuxeo/templates/auth/mail_validation.html:14
 msgid "Please use the following link to help us verify your email address:"
-msgstr "Bitte benutzen Sie den folgenden Link um ihre M-mail zu verifizieren"
+msgstr "bitte benutzen Sie den folgenden Link um ihre Email zu verifizieren"
 
 #: forum/skins/default/templates/auth/mail_validation.html:16
 #: forum/skins/default/templates/auth/welcome_email.html:26
@@ -5194,7 +5194,7 @@ msgid ""
 "If the above link is not clickable, copy and paste this url into your web "
 "browser's address bar:"
 msgstr ""
-"Wenn der Link ist nicht anklickbar ist, kopieren Sie diese URL in Ihren "
+"Wenn der Link ist nicht anklickbar ist, kopieren Sie diese URL in Ihre "
 "Browser-Adressleiste:"
 
 #: forum/skins/default/templates/auth/mail_validation.html:24
