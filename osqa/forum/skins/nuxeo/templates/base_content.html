@@ -71,18 +71,18 @@
         {% loadregistry head_content %}{% endloadregistry %}
     </head>
     <body>
+        <div class="notify" style="display:none">
+            {% autoescape off %}
+                {% if user_messages %}
+                    {% for message in user_messages %}
+                          <p>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endautoescape %}
+            <a id="close-notify" onclick="notify.close(true)">&times;</a>
+        </div>
         <div id="side"></div>
         <div id="content">
-            <div class="notify" style="display:none">
-                {% autoescape off %}
-                    {% if user_messages %}
-                        {% for message in user_messages %}
-                              <p>{{ message }}</p>
-                        {% endfor %}
-                    {% endif %}
-                {% endautoescape %}
-                <a id="close-notify" onclick="notify.close(true)">&times;</a>
-            </div>
             {% if settings.USE_CUSTOM_HEADER|or_preview:request %}
                 <div id="custom_header">
                     {{ settings.CUSTOM_HEADER|or_preview:request|static_content:settings.CUSTOM_HEADER_RENDER_MODE }}

@@ -54,7 +54,7 @@ p {
 }
 
 a {
-    color: #35750A;
+    color: #497E47;
     text-decoration: none;
 }
 
@@ -235,12 +235,12 @@ blockquote {
 
 #nav a:hover {
     background: none repeat scroll 0 0 #fff;
-    color: #339E33;
+    color: #5FA25C;
 }
 
 #nav a.on {
     background: none repeat scroll 0 0 #fff;
-    color: #339E33;
+    color: #5FA25C;
     font-weight: 600;
     text-decoration: none;
 }
@@ -250,7 +250,7 @@ blockquote {
 }
 
 #question {
-    background-color: #35750A;
+    background-color: #497E47;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     border: 1px solid #122C05;
@@ -269,12 +269,12 @@ blockquote {
 }
 
 #question:hover {
-    background-color: #70B443;
+    background-color: #5FA25C;
     text-decoration:none;
 }
 
 #topBar {
-    width:100%;
+   /*width:100%;*/
 }
 
 #searchBar { float: left; padding-top: 7px; }
@@ -369,7 +369,7 @@ blockquote {
     margin: 0 0 20px 0;
 }
 .short-summary h2 a {
-    color: #35750A;
+    color: #497E47;
     font-size: 15px;
     -moz-transition: color .4s;  /* FF4+ */
     -o-transition: color .4s;  /* Opera 10.5+ */
@@ -379,7 +379,7 @@ blockquote {
 }
 
 .short-summary h2 a:hover {
-    color: #7FC054;
+    color: #5FA25C;
     text-decoration: none;
 }
 
@@ -391,7 +391,7 @@ blockquote {
 }
 
 .userinfo a, a.userinfo {
-    color: #35750A;
+    color: #497E47;
 }
 
 .short-summary .counts {
@@ -439,7 +439,7 @@ blockquote {
 }
 
 .questions-count {
-    color: #BCC243;
+    color: black;
     font-weight: bold;
     font-size: 110%;
     margin-top: 3px;
@@ -521,7 +521,7 @@ blockquote {
 }
 
 .paginator .page, .paginator .page a:visited, .paginator .page a, .paginator .curr {
-    color: #BCC243;
+    color: #497E47;
     margin: 0 0.25em;
     padding: 0.25em;
 }
@@ -532,12 +532,12 @@ blockquote {
 }
 
 .paginator .page:hover, .paginator .prev a:hover, .paginator .next a:hover {
-    color: #35750A;
+    color: #497E47;
     text-decoration: none;
 }
 
 .paginator .text {
-    color: #BCC243;
+    color: black;
     padding: 0.3em;
 }
 
@@ -553,10 +553,10 @@ blockquote {
 }
 
 .tags a, span.tag {
-    background-color: #EDF0F0;
+    background-color: #E9EEB0;
     border-radius:3px;
     margin-right: 3px;
-    color: #35750A;
+    color: #497E47;
     font-size: 11px;
     font-weight: normal;
     padding: 2px 8px;
@@ -620,7 +620,7 @@ a.medal:hover {
 }
 
 .tabsA a, .sticky-sort-tabs {
-    color: #BCC243;
+    /*color: #BCC243;*/
     border-bottom: 2px solid #EBEBEB;
     display: block;
     float: left;
@@ -670,7 +670,7 @@ a.medal:hover {
     line-height: 23px;
     margin: 2px 0 0 0;
     padding: 0 6px 0 0;
-    color: #BCC243;
+    color: black;
 }
 
 .headUsers {
@@ -680,7 +680,7 @@ a.medal:hover {
     font-size: 15px;
     font-weight: 700;
     height: 23px;
-    color: #BCC243;
+    color: black;
     line-height: 23px;
     margin: 2px 0 0 0;
     padding: 0 6px 0 15px;
@@ -693,7 +693,7 @@ a.medal:hover {
     font-size: 15px;
     font-weight: 700;
     height: 23px;
-    color: #BCC243;
+    color: black;
     line-height: 23px;
     margin: 2px 0 0 0;
     padding: 0 6px 0 15px;
@@ -972,13 +972,13 @@ del {
 }
 
 .count {
-    color: #3A791D;
+    color: black;
 }
 
 .scoreNumber {
     background-color: #F0FFAB;
     box-shadow: 0 1px 0 0 white inset;
-    border: 1px solid #35330D;
+    border: 1px solid #C5C391;
     color: #363A0E;
     margin-bottom: 8px;
     padding: 1px 4px;
@@ -1111,9 +1111,9 @@ del {
 
 .score {
     background-color: white;
-    border: 1px solid #35330D;
+    border: 1px solid #C5C391;
     border-radius:3px;
-    color: #BCC243;
+    color: #757925;
     padding: 1px;
 }
 
@@ -1122,12 +1122,12 @@ div#user-menu-container { float: right; }
 #links .score { color: #aaa; }
 
 .footerLinks {
-    color: #35750A;
+    color: #497E47;
     font-size: 13px;
 }
 
 .footerLinks a {
-    color: #35750A;
+    color: #497E47;
     font-size: 13px;
 }
 
@@ -1152,7 +1152,7 @@ div#user-menu-container { float: right; }
 
 .message {
     background-color: #f7f7f7;
-    border: 1px solid #C2ECFF;
+    border: 1px solid #D8FFC2;
     color: #333333;
     font-size: 90%;
     margin: 10px 0;
@@ -1171,7 +1171,7 @@ div#user-menu-container { float: right; }
 }
 
 .submit {
-    background-color: #35750A;
+    background-color: #497E47;
     border: none;
     border-radius: 5px;
     box-shadow: 0 5px 0 #DAE9C3;
@@ -1191,7 +1191,7 @@ div#user-menu-container { float: right; }
 
 .submit:hover {
     text-decoration: none;
-    background-color: #70B443;
+    background-color: #5FA25C;
 }
 
 .ask-body {
@@ -1737,8 +1737,8 @@ div.dialog, .context-menu-dropdown {
     background-color: #EEEEEE;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    -moz-box-shadow: 2px 2px 5px #35750A;
-    -webkit-box-shadow: 2px 2px 5px #35750A;
+    -moz-box-shadow: 2px 2px 5px #497E47;
+    -webkit-box-shadow: 2px 2px 5px #497E47;
 }
 
 .context-menu-dropdown {
@@ -1770,7 +1770,7 @@ div.dialog, .context-menu-dropdown {
 }
 
 .context-menu-dropdown li.item:hover {
-    background-color: #35750A;
+    background-color: #497E47;
     color: white;
 }
 
@@ -1804,7 +1804,7 @@ div.dialog .dialog-buttons {
     margin: 0 3px 5px 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    background-color: #35750A;
+    background-color: #497E47;
     color: white;
     height: 20px;
     line-height: 20px;
@@ -1928,11 +1928,11 @@ div.wmd-button-bar {}
 
 /* custom rules blackpixels */
 #side { 
-    background: transparent url(/m/nuxeo/media/images/caveman.png) no-repeat fixed 0% 0%;
-    background-size: 300px;
-    height: 100%;
-    width: 300px;
-    position: fixed;
+    background: transparent url(/m/nuxeo/media/images/caveman.png) no-repeat scroll 0 25px;
+    background-size: 260px;
+    width: 260px;
+    height: 620px;
+    position: absolute;
 }
 #wrapper { opacity: 0.95; }
 #paleonaut-home { 
@@ -1949,7 +1949,7 @@ div.wmd-button-bar {}
     margin-right: 30px;
     font-family: 'Frijole', cursive;
 }
-#title > a:hover {
+#paleonaut-home > a:hover {
     text-decoration: none;
 }
 #paleonaut-home #tagline {
@@ -1959,7 +1959,7 @@ div.wmd-button-bar {}
 #topBar {
     z-index: 100;
     position: absolute;
-    right: 20%;
+    right: 12%;
 }
 #content {
     margin-left: 150px;
