@@ -9,5 +9,6 @@ git+git://github.com/dcramer/django-sphinx.git
 gunicorn==0.13.4
 html5lib==0.90
 psycopg2==2.4.4
+python-postmark==0.3.2
 python-openid==2.2.5
 wsgiref==0.1.2
