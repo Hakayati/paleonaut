@@ -46,9 +46,9 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             fb_url = "https://graph.facebook.com/oauth/access_token?" + urlencode(args)
             response = cgi.parse_qs(urlopen(fb_url).read())
             logging.warn('------------> access_token : %s', response["access_token"])
-            access_token = response["access_token"][0]
+            access_token = response["access_token"][-1]
 
-            #raise ValueError('just testing!')
+            raise ValueError('just testing!')
             user_data = self.get_user_data(access_token)
             assoc_key = user_data["id"]
 
