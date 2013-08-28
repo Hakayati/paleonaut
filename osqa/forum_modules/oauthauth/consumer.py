@@ -25,7 +25,8 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
     def prepare_authentication_request(self, request, redirect_to):
         request_token = self.fetch_request_token()
         request.session['unauthed_token'] = request_token.to_string()
-        return self.authorize_token_url(request_token, callback_url=redirect_to)
+        callback_url = "%s%s" % (django_settings.APP_URL, redirect_to)
+        return self.authorize_token_url(request_token, callback_url=callback_url)
 
     def process_authentication_request(self, request):
         unauthed_token = request.session.get('unauthed_token', None)
@@ -60,7 +61,6 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         params = oauth_request.parameters
         data = urllib.urlencode(params)
         full_url='%s?%s'%(self.authorization_url, data)
-        raise ValueError()
         return full_url
 
     def fetch_access_token(self, token):
