@@ -22,12 +22,12 @@ ADMINS = (
         )
 MANAGERS = ADMINS
 
-DEBUG = False
+DEBUG = True
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': True
 }
 TEMPLATE_DEBUG = DEBUG
-INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = ('0.0.0.0',)
 
 # Register database schemes in URLs.
 urlparse.uses_netloc.append('postgres')
