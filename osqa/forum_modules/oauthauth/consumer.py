@@ -52,6 +52,7 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         data = urllib.urlencode(params)
         full_url='%s?%s'%(self.request_token_url, data)
         response = urllib2.urlopen(full_url)
+        raise ValueError()
         return oauth.OAuthToken.from_string(response.read())
 
     def authorize_token_url(self, token, callback_url=None):
