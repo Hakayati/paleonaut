@@ -25,7 +25,7 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
     def prepare_authentication_request(self, request, redirect_to):
         request_token = self.fetch_request_token()
         request.session['unauthed_token'] = request_token.to_string()
-        return self.authorize_token_url(request_token, callback=redirect_to)
+        return self.authorize_token_url(request_token, callback_url=redirect_to)
 
     def process_authentication_request(self, request):
         unauthed_token = request.session.get('unauthed_token', None)
