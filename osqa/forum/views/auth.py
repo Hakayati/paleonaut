@@ -197,7 +197,12 @@ def external_register(request):
             return HttpResponseRedirect(reverse('auth_signin'))
 
         provider_class = AUTH_PROVIDERS[auth_provider].consumer
-        user_data = provider_class.get_user_data(request.session["access_token"])
+
+        # Hack: Facebook auth expects an access token, not the assoc_key.
+        identifier = request.session['assoc_key']
+        if auth_provider == 'facebook':
+            identifier = request.session['access_token']
+        user_data = provider_class.get_user_data(identifier)
 
         if not user_data:
             user_data = request.session.get('auth_consumer_data', {})

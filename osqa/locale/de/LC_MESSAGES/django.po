@@ -1050,7 +1050,7 @@ msgstr "Kennwort erforderlich"
 
 #: forum/forms/general.py:135
 msgid "retype password"
-msgstr "Geben Sie das Passwort nochmals ein"
+msgstr "Passwort wiederholen"
 
 #: forum/forms/general.py:136
 msgid "please, retype your password"
