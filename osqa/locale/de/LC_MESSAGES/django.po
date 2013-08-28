@@ -1275,8 +1275,8 @@ msgstr ""
 #, python-format
 msgid "First time here? Check out the <a href=\"%s\">FAQ</a>!"
 msgstr ""
-"Zum ersten Mal hier? Schauen Sie sich die <a href = \"%s\">häufig gestellten "
-"Fragen</a>!"
+"Zum ersten Mal hier? Schauen Sie doch mal in unser <a href = \"%s\">FAQ"
+"</a>!"
 
 #: forum/models/action.py:215
 msgid "You"
@@ -5176,7 +5176,7 @@ msgstr "bitte benutzen Sie den folgenden Link um ihre Email zu verifizieren"
 #: forum/skins/nuxeo/templates/auth/mail_validation.html:16
 #: forum/skins/nuxeo/templates/auth/welcome_email.html:26
 msgid "Validate my email address"
-msgstr "Bestätige meine E-Mail-Adresse"
+msgstr "E-Mail-Adresse bestätigen"
 
 #: forum/skins/default/templates/auth/mail_validation.html:18
 #: forum/skins/default/templates/auth/temp_login_email.html:19
@@ -5440,7 +5440,7 @@ msgid ""
 "real simple."
 msgstr ""
 "Hallo und  Willkommen zu %(app_name)s. Wir wissen, dass Sie beschäftigt sind "
-"- deswegen machen wir es ganz einfach."
+"- deswegen machen wir es kurz."
 
 #: forum/skins/default/templates/auth/welcome_email.html:19
 #: forum/skins/default/templates/auth/welcome_email.html:35
@@ -5452,8 +5452,7 @@ msgstr ""
 #: forum/skins/nuxeo/templates/auth/welcome_email.html:35
 msgid "Here's your login info (store it in a cool dry place):"
 msgstr ""
-"Hier ist Ihre Login-Informationen (speichern sie in einem kühlen, trockenen "
-"Ort):"
+"Hier sind Ihre Login-Informationen (bitte kühl & trocken lagern):"
 
 #: forum/skins/default/templates/auth/welcome_email.html:21
 #: forum/skins/default/templates/auth/welcome_email.html:37
@@ -5475,7 +5474,7 @@ msgstr "Benutzername: "
 #: forum/skins/nuxeo/templates/auth/welcome_email.html:22
 #: forum/skins/nuxeo/templates/auth/welcome_email.html:38
 msgid "Password: As IF we would send your password in cleartext!"
-msgstr "Passwort: Als ob wir Ihr Passwort im Klartext senden würden!"
+msgstr "Passwort: Nein, das senden wir Ihnen natürlich nicht als Klartext!"
 
 #: forum/skins/default/templates/auth/welcome_email.html:24
 #: forum/skins/fresh/osqa-fresh-skin/templates/auth/welcome_email.html:24
@@ -5483,7 +5482,7 @@ msgstr "Passwort: Als ob wir Ihr Passwort im Klartext senden würden!"
 #: forum/skins/nuxeo/templates/auth/welcome_email.html:24
 msgid "The following link will help us verify your email address:"
 msgstr ""
-"Der folgende Link wird uns helfen, Ihre E-Mail-Adresse zu verifizieren:"
+"Bitte klicken Sie auf diesen Link, um Ihre Email-Adresse zu verifizieren:"
 
 #: forum/skins/default/templates/feeds/rss_answer_title.html:2
 #: forum/skins/fresh/osqa-fresh-skin/templates/feeds/rss_answer_title.html:2
