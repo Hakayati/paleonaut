@@ -24,7 +24,7 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         self.authorization_url = authorization_url
 
     def prepare_authentication_request(self, request, redirect_to):
-        request_token = self.fetch_request_token()
+        request_token = self.fetch_request_token(redirect_to)
         request.session['unauthed_token'] = request_token.to_string()
         return self.authorize_token_url(request_token)
 
@@ -46,7 +46,7 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         #token = oauth.OAuthToken.from_string(access_token)
         return {}
 
-    def fetch_request_token(self):
+    def fetch_request_token(self, redirect_to=None):
         oauth_request = oauth.OAuthRequest.from_consumer_and_token(self.consumer, http_url=self.request_token_url)
         oauth_request.sign_request(self.signature_method, self.consumer, None)
         params = oauth_request.parameters
