@@ -50,8 +50,8 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         oauth_request = oauth.OAuthRequest.from_consumer_and_token(self.consumer, http_url=self.request_token_url)
         oauth_request.sign_request(self.signature_method, self.consumer, None)
         params = oauth_request.parameters
-        callback_url = "%s%s" % (django_settings.APP_URL, redirect_to)
-        params['oauth_callback'] = callback_url
+        #callback_url = "%s%s" % (django_settings.APP_URL, redirect_to)
+        #params['oauth_callback'] = callback_url
         data = urllib.urlencode(params)
         full_url='%s?%s'%(self.request_token_url, data)
         response = urllib2.urlopen(full_url)
