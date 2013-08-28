@@ -53,6 +53,8 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         data = urllib.urlencode(params)
         full_url='%s?%s'%(self.request_token_url, data)
         response = urllib2.urlopen(full_url)
+        callback_url = "%s%s" % (django_settings.APP_URL, redirect_to)
+        raise ValueError()
         return oauth.OAuthToken.from_string(response.read())
 
     def authorize_token_url(self, token, callback_url=None):
@@ -70,8 +72,6 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         data = urllib.urlencode(params)
         full_url='%s?%s'%(self.access_token_url, data)
         response = urllib2.urlopen(full_url)
-        callback_url = "%s%s" % (django_settings.APP_URL, redirect_to)
-        raise ValueError()
         return oauth.OAuthToken.from_string(response.read())
 
     def fetch_data(self, token, http_url, parameters=None):
@@ -87,4 +87,3 @@ class OAuthAbstractAuthConsumer(AuthenticationConsumer):
         connection.request(oauth_request.http_method, url)
 
         return connection.getresponse().read()
-
