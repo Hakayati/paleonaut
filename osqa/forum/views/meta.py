@@ -82,9 +82,12 @@ def privacy(request):
 
 @decorate.withfn(login_required)
 def logout(request):
-    return render_to_response('logout.html', {
-    'next' : get_next_url(request),
-    }, context_instance=RequestContext(request))
+    # Skip the stupid logout page step.
+    return HttpResponseRedirect('%s?next=%s' % (
+        reverse('user_signout'), get_next_url(request)))
+    #return render_to_response('logout.html', {
+    #'next' : get_next_url(request),
+    #}, context_instance=RequestContext(request))
 
 @decorators.render('badges.html', 'badges', _('badges'), weight=300)
 def badges(request):

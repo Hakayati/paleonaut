@@ -1989,6 +1989,7 @@ div.wmd-button-bar {}
 }
 #content {
     margin-left: 150px;
+    min-height: 600px;
 }
 #nav {
     position: relative;
