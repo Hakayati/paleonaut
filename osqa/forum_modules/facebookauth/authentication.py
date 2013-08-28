@@ -49,7 +49,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             access_token = response["access_token"][-1]
 
             #raise ValueError('just testing!')
-            user_data = self.get_user_data(access_token, response)
+            user_data = self.get_user_data(access_token)
             assoc_key = user_data["id"]
 
             # Store the access token in cookie
@@ -62,7 +62,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
         #    logging.error("Problem during facebook authentication: %s" % e)
         #    raise InvalidAuthentication(_("Something wrond happened during Facebook authentication, administrators will be notified"))
 
-    def get_user_data(self, access_token2, response):
+    def get_user_data(self, access_token2):
         fb_url = "https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token2))
         profile = load_json(urlopen(fb_url))
         name = profile["name"]
