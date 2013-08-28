@@ -22,7 +22,7 @@ ADMINS = (
         )
 MANAGERS = ADMINS
 
-DEBUG = True
+DEBUG = False
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': True
 }
