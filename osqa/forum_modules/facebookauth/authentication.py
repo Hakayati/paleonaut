@@ -36,7 +36,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
         return facebook_api_authentication_url
     
     def process_authentication_request(self, request):
-        try:
+        #try:
             redirect_uri = "%s%s" % (django_settings.APP_URL, reverse('auth_provider_done', prefix='/', kwargs={'provider': 'facebook'}))
             args = dict(client_id=settings.FB_API_KEY, redirect_uri=redirect_uri)
             args["client_secret"] = settings.FB_APP_SECRET  #facebook APP Secret
@@ -58,9 +58,9 @@ class FacebookAuthConsumer(AuthenticationConsumer):
 
             # Return the association key
             return assoc_key
-        except Exception, e:
-            logging.error("Problem during facebook authentication: %s" % e)
-            raise InvalidAuthentication(_("Something wrond happened during Facebook authentication, administrators will be notified"))
+        #except Exception, e:
+        #    logging.error("Problem during facebook authentication: %s" % e)
+        #    raise InvalidAuthentication(_("Something wrond happened during Facebook authentication, administrators will be notified"))
 
     def get_user_data(self, access_token):
         profile = load_json(urlopen("https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token))))
