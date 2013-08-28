@@ -108,19 +108,24 @@ def process_provider_signin(request, provider):
 
         try:
             assoc_key = provider_class.process_authentication_request(request)
+            logging.warn('assoc_key: %s', assoc_key)
         except InvalidAuthentication, e:
             request.session['auth_error'] = e.message
+            logging.warn('auth_error: %s', e.message)
             return HttpResponseRedirect(reverse('auth_signin'))
 
+        logging.warn('is_authenticated: %s', request.user.is_authenticated)
         if request.user.is_authenticated():
+            logging.warn('isinstance: %s', type(User))
             if isinstance(assoc_key, (type, User)):
                 if request.user != assoc_key:
                     request.session['auth_error'] = _(
-                            "Sorry, these login credentials belong to anoother user. Plese terminate your current session and try again."
+                            "Sorry, these login credentials belong to another user. Plese terminate your current session and try again."
                             )
                 else:
                     request.session['auth_error'] = _("You are already logged in with that user.")
             else:
+                logging.warn('isinstance: Nope')
                 try:
                     assoc = AuthKeyUserAssociation.objects.get(key=assoc_key)
                     if assoc.user == request.user:
@@ -128,7 +133,7 @@ def process_provider_signin(request, provider):
                                 "These login credentials are already associated with your account.")
                     else:
                         request.session['auth_error'] = _(
-                                "Sorry, these login credentials belong to anoother user. Plese terminate your current session and try again."
+                                "Sorry, these login credentials belong to another user. Plese terminate your current session and try again."
                                 )
                 except:
                     uassoc = AuthKeyUserAssociation(user=request.user, key=assoc_key, provider=provider)
@@ -145,8 +150,10 @@ def process_provider_signin(request, provider):
         try:
             assoc = AuthKeyUserAssociation.objects.get(key=assoc_key)
             user_ = assoc.user
+            logging.warn('assoc.user: %s', assoc.user)
             return login_and_forward(request, user_)
         except AuthKeyUserAssociation.DoesNotExist:
+            logging.warn('user not found')
             request.session['assoc_key'] = assoc_key
             request.session['auth_provider'] = provider
             return HttpResponseRedirect(reverse('auth_external_register'))

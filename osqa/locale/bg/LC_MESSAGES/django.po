@@ -6815,7 +6815,7 @@ msgstr ""
 
 #: forum/views/auth.py:111 forum/views/auth.py:123
 msgid ""
-"Sorry, these login credentials belong to anoother user. Plese terminate your "
+"Sorry, these login credentials belong to another user. Plese terminate your "
 "current session and try again."
 msgstr ""
 

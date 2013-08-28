@@ -3521,7 +3521,7 @@ msgid "All values recalculated"
 msgstr ""
 
 #: forum/views/auth.py:103 forum/views/auth.py:112
-msgid "Sorry, these login credentials belong to anoother user. Plese terminate your current session and try again."
+msgid "Sorry, these login credentials belong to another user. Plese terminate your current session and try again."
 msgstr ""
 
 #: forum/views/auth.py:105

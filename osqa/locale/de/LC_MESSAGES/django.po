@@ -8676,7 +8676,7 @@ msgstr "Alle ausgewählten Knoten gelöscht"
 
 #: forum/views/auth.py:119 forum/views/auth.py:131
 msgid ""
-"Sorry, these login credentials belong to anoother user. Plese terminate your "
+"Sorry, these login credentials belong to another user. Plese terminate your "
 "current session and try again."
 msgstr ""
 "Diese Anmeldungsinformationen gehören zu einem anderen Benutzer - bitte "
