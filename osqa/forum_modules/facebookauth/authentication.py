@@ -7,7 +7,6 @@ from urllib import urlopen,  urlencode
 from forum.authentication.base import AuthenticationConsumer, ConsumerTemplateContext, InvalidAuthentication
 
 from django.conf import settings as django_settings
-from django.core.urlresolvers import reverse
 from django.utils.encoding import smart_unicode
 from django.utils.translation import ugettext as _
 
@@ -30,25 +29,22 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             redirect_uri="%s%s" % (django_settings.APP_URL, redirect_to),
             scope="email"
         )
-        logging.warn('------------------> %s', args)
+
         facebook_api_authentication_url = "https://graph.facebook.com/oauth/authorize?" + urlencode(args)
 
         return facebook_api_authentication_url
     
     def process_authentication_request(self, request):
-        #try:
-            redirect_uri = "%s%s" % (django_settings.APP_URL, reverse('auth_provider_done', prefix='/', kwargs={'provider': 'facebook'}))
-            args = dict(client_id=settings.FB_API_KEY, redirect_uri=redirect_uri)
+        try:
+            args = dict(client_id=settings.FB_API_KEY, redirect_uri="%s%s" % (django_settings.APP_URL, request.path))
+
             args["client_secret"] = settings.FB_APP_SECRET  #facebook APP Secret
 
             args["code"] = request.GET.get("code", None)
-            code = args["code"]
-            fb_url = "https://graph.facebook.com/oauth/access_token?" + urlencode(args)
-            response = cgi.parse_qs(urlopen(fb_url).read())
-            logging.warn('------------> access_token : %s', response["access_token"])
+            response = cgi.parse_qs(urlopen("https://graph.facebook.com/oauth/access_token?" + urlencode(args)).read())
             access_token = response["access_token"][-1]
 
-            #raise ValueError('just testing!')
+
             user_data = self.get_user_data(access_token)
             assoc_key = user_data["id"]
 
@@ -58,13 +54,13 @@ class FacebookAuthConsumer(AuthenticationConsumer):
 
             # Return the association key
             return assoc_key
-        #except Exception, e:
-        #    logging.error("Problem during facebook authentication: %s" % e)
-        #    raise InvalidAuthentication(_("Something wrond happened during Facebook authentication, administrators will be notified"))
+        except Exception, e:
+            logging.error("Problem during facebook authentication: %s" % e)
+            raise InvalidAuthentication(_("Something wrond happened during Facebook authentication, administrators will be notified"))
 
-    def get_user_data(self, access_token2):
-        fb_url = "https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token2))
-        profile = load_json(urlopen(fb_url))
+    def get_user_data(self, access_token):
+        profile = load_json(urlopen("https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token))))
+
         name = profile["name"]
 
         # Check whether the length if the email is greater than 75, if it is -- just replace the email
