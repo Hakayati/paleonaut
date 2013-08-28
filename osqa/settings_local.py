@@ -101,3 +101,6 @@ DISABLED_MODULES = ['books', 'recaptcha', 'project_badges', 'sphinxfulltext', 'p
 SOUTH_DATABASE_ADAPTERS = {
     'default': 'south.db.postgresql_psycopg2',
 }
+
+FB_API_KEY = '667594429919527'
+FB_APP_SECRET = 'bf78ec7b86cebce8b85521ec1459ba7b'

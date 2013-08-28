@@ -29,7 +29,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             redirect_uri="%s%s" % (django_settings.APP_URL, redirect_to),
             scope="email"
         )
-
+        logging.warn('------------------> %s', args)
         facebook_api_authentication_url = "https://graph.facebook.com/oauth/authorize?" + urlencode(args)
 
         return facebook_api_authentication_url
@@ -60,7 +60,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
 
     def get_user_data(self, access_token):
         profile = load_json(urlopen("https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token))))
-
+        logging.warn('------------------> %s', profile)
         name = profile["name"]
 
         # Check whether the length if the email is greater than 75, if it is -- just replace the email
