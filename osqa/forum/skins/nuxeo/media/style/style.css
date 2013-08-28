@@ -200,7 +200,6 @@ blockquote {
 
 #links {
     float: right;
-    padding: 10px 20px;
     text-align: right;
 }
 
@@ -209,11 +208,12 @@ blockquote {
     font-size: 12px;
     height: 35px;
     margin-left: 20px;
+    margin-right: 20px;
     text-align: right;
     text-decoration:none;
 }
 
-#links a:hover { color: #000 }
+#links a:hover { color: darkgrey }
 
 #nav {
     float: left;
@@ -274,7 +274,32 @@ blockquote {
 }
 
 #topBar {
-   /*width:100%;*/
+    /*width:100%;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(73, 126, 71);
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: solid 1px darkgrey;
+    border-left: solid 1px darkgrey;
+    border-bottom: solid 1px darkgrey;
+    -webkit-box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 5px rgba(50, 50, 50, 0.75);
+}
+
+#links {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#links > a {
+    color: white;
+    font-weight: bold;
 }
 
 #searchBar { float: left; padding-top: 7px; }
@@ -1938,7 +1963,7 @@ div.wmd-button-bar {}
 #paleonaut-home { 
     line-height: 18px;
     padding-bottom: 10px;
-    padding-top: 35px !important;
+    padding-top: 45px !important;
     width: 1000px;
     background-color: transparent;
     padding: 20px;
@@ -1975,7 +2000,7 @@ div.foot a:link, div.foot a:visited, div.foot a:active, div.foot a.PagerLink { t
 div.foot a:hover { color:white }
 div.foot .SmallText { color:#000; font-size:9px }
 div.foot .SmallText a { font-size:9px; color:#000000;text-decoration:underline }
-div.foot .Contact { border-bottom:1px dotted #404040; clear:both; font-size: 11px; padding:50px 0 20px }
+div.foot .Contact { border-bottom:1px dotted #404040; clear:both; font-size: 11px; padding:10px 0 20px }
 div.foot .Contact span { font: bold 18px Arial,Verdana,sans-serif; color: white; letter-spacing:1px }
 div.foot .FootLinks { margin:0 auto; width:930px }
 div.foot ul { float:left; text-align:left;list-style:none; margin:0; padding:5px 30px }
@@ -1987,3 +2012,39 @@ div.foot .connect { color: #e5352d }
 div.foot .twitter { color: #3cf }
 div.foot .linkedIn { color: #378bb3 }
 div.foot .facebook { color: #6585c6 }
+
+#tagSelector {
+    background: #F9FFDD;
+    background: -moz-linear-gradient(center top , #F9FFDD 0%, #BCC243 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F9FFDD), color-stop(100%,#BCC243));
+    background: -webkit-linear-gradient(top, #F9FFDD 0%,#BCC243 100%);
+    background: -o-linear-gradient(top, #F9FFDD 0%,#BCC243 100%);
+    background: -ms-linear-gradient(top, #F9FFDD 0%,#BCC243 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9FFDD', endColorstr='#BCC243',GradientType=0 );
+    background: linear-gradient(top, #F9FFDD 0%,#BCC243 100%);
+    border-radius: 5px;
+    margin: 10px auto 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    border: 1px solid #CECFB6;
+}
+
+#interestingTagInput,
+#ignoredTagInput {
+    border: none 0;
+    background: white;
+    padding: 0;
+    font-size: 12px;
+    height: 18px;
+    padding: 4px 5px;
+    border-radius: 4px;
+}
+
+.ac_over {
+    background-color: rgb(188, 194, 67);
+}
+
+h3.subtitle {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
