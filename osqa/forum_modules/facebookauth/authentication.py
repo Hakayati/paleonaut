@@ -44,7 +44,7 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             args["code"] = request.GET.get("code", None)
             code = args["code"]
             fb_url = "https://graph.facebook.com/oauth/access_token?" + urlencode(args)
-            response = cgi.parse_qs(urlopen(url).read())
+            response = cgi.parse_qs(urlopen(fb_url).read())
             logging.warn('------------> access_token : %s', response["access_token"])
             access_token = response["access_token"][-1]
 
