@@ -107,7 +107,6 @@ INSTALLED_APPS = [
     'postmark',
 ]
 
-"""
 if DEBUG:
     try:
         import debug_toolbar
@@ -115,7 +114,7 @@ if DEBUG:
         INSTALLED_APPS.append('debug_toolbar')
     except:
         pass
-"""
+
 try:
     import south
     INSTALLED_APPS.append('south')
