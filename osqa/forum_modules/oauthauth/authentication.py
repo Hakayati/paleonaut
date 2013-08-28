@@ -15,9 +15,9 @@ class TwitterAuthConsumer(OAuthAbstractAuthConsumer):
                 str(settings.TWITTER_CONSUMER_KEY),
                 str(settings.TWITTER_CONSUMER_SECRET),
                 "twitter.com",
-                "https://api.twitter.com/oauth/request_token",
-                "https://api.twitter.com/oauth/access_token",
-                "https://api.twitter.com/oauth/authorize",
+                "https://api.twitter.com/1/oauth/request_token",
+                "https://api.twitter.com/1/oauth/access_token",
+                "https://api.twitter.com/1/oauth/authorize",
         )
 
     def get_user_data(self, key):
