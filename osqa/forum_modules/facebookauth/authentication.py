@@ -42,11 +42,13 @@ class FacebookAuthConsumer(AuthenticationConsumer):
             args["client_secret"] = settings.FB_APP_SECRET  #facebook APP Secret
 
             args["code"] = request.GET.get("code", None)
-            response = cgi.parse_qs(urlopen("https://graph.facebook.com/oauth/access_token?" + urlencode(args)).read())
+            code = args["code"]
+            fb_url = "https://graph.facebook.com/oauth/access_token?" + urlencode(args)
+            response = cgi.parse_qs(urlopen(url).read())
             logging.warn('------------> access_token : %s', response["access_token"])
             access_token = response["access_token"][-1]
 
-
+            raise ValueError('just testing!')
             user_data = self.get_user_data(access_token)
             assoc_key = user_data["id"]
 
@@ -62,7 +64,6 @@ class FacebookAuthConsumer(AuthenticationConsumer):
 
     def get_user_data(self, access_token):
         profile = load_json(urlopen("https://graph.facebook.com/me?" + urlencode(dict(access_token=access_token))))
-        logging.warn('------------------> %s', profile)
         name = profile["name"]
 
         # Check whether the length if the email is greater than 75, if it is -- just replace the email
