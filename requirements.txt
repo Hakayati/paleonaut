@@ -8,6 +8,7 @@ git+git://github.com/robhudson/django-debug-toolbar.git
 git+git://github.com/dcramer/django-sphinx.git
 gunicorn==0.13.4
 html5lib==0.90
+httplib2==0.8
 psycopg2==2.4.4
 python-postmark==0.3.2
 python-openid==2.2.5
