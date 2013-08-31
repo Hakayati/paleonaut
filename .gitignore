@@ -1,3 +1,7 @@
+# uploads folder so that its content is persistent
+/osqa/forum/upfiles/
+
+
 *.py[cod~]
 
 # C extensions
