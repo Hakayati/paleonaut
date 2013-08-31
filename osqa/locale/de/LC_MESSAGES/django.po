@@ -8428,11 +8428,11 @@ msgstr "gestern"
 
 #: forum/templatetags/extra_tags.py:111
 msgid "hour ago"
-msgstr "Stunde früher"
+msgstr "Stunde"
 
 #: forum/templatetags/extra_tags.py:111
 msgid "hours ago"
-msgstr "Stunden früher"
+msgstr "Stunden"
 
 #: forum/templatetags/extra_tags.py:111
 #, python-format
@@ -8443,11 +8443,11 @@ msgstr[1] "%(hr)d "
 
 #: forum/templatetags/extra_tags.py:113
 msgid "min ago"
-msgstr "Minute früher"
+msgstr "Minute"
 
 #: forum/templatetags/extra_tags.py:113
 msgid "mins ago"
-msgstr "Minuten früher"
+msgstr "Minuten"
 
 #: forum/templatetags/extra_tags.py:113
 #, python-format
@@ -8458,11 +8458,11 @@ msgstr[1] "%(min)d"
 
 #: forum/templatetags/extra_tags.py:115
 msgid "sec ago"
-msgstr "Sekunde her"
+msgstr "Sekunde"
 
 #: forum/templatetags/extra_tags.py:115
 msgid "secs ago"
-msgstr "Sekunden früher"
+msgstr "Sekunden"
 
 #: forum/templatetags/extra_tags.py:115
 #, python-format
