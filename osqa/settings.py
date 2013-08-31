@@ -2,7 +2,6 @@
 import os.path
 import sys
 
-
 SITE_ID = 1
 
 ADMIN_MEDIA_PREFIX = '/admin_media/'
