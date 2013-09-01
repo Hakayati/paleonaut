@@ -15,17 +15,17 @@
  */
 
 var products = [
-    {name: 'Nuxeo Platform', id: 'content-management-platform'},
-    {name: 'Document Management', id: 'document-management'},
-    {name: 'Digital Asset Management', id: 'digital-asset-management'},
-    {name: 'Case Management', id: 'case-management'},
-    {name: 'Social Collaboration', id: 'social-collaboration'},
-    {name: 'Mobile Content Management', id: 'nuxeo-mobile'},
-    {name: 'Nuxeo Cloud', id: 'nuxeo-cloud'},
-    {name: 'Nuxeo Studio', id: 'nuxeo-studio'},
-    {name: 'Nuxeo IDE', id: 'nuxeo-ide'},
-    {name: 'Nuxeo Maketplace', id: 'nuxeo-marketplace'},
-    {name: 'Nuxeo Connect', id: 'nuxeo-connect'},
+    {name: 'Paleo', id: 'paleo'},
+    {name: 'Fett', id: 'fett'},
+    {name: 'abnehmen', id: 'abnehmen'},
+    {name: 'Fleisch', id: 'fleisch'},
+    {name: 'Milchprodukte', id: 'milchprodukte'},
+    {name: 'essen', id: 'essen'},
+    {name: 'vegetarisch', id: 'vegetarisch'},
+    {name: 'Fittness', id: 'fittness'},
+    {name: 'Protein', id: 'protein'},
+    {name: 'Gesundheit', id: 'Gesundheit'},
+    {name: 'low-carb', id: 'low-carb'},
 ]
 var development_products = [
     //'Nuxeo DM', 'Nuxeo DAM', 'Nuxeo CMF', 'Nuxeo Marketplace', 'Nuxeo Studio'
@@ -103,7 +103,7 @@ $(function(){
         .css({float: 'right'})
 
     wizard.dialog({
-        title: 'Tag Selection Wizard',
+        title: 'Tag Auswahl',
         autoOpen: false,
         draggable: true,
         hide: 'fade',

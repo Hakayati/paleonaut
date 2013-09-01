@@ -1115,7 +1115,7 @@ msgid ""
 "%(max)s tags can be used."
 msgstr ""
 "Tags sind kurze Stichworte, ohne Leerzeichen. Sie können zwischen %(min)s "
-"und und %(max)s Tags verwenden."
+"und und %(max)s Tags verwenden - einzelne Tags mit Leerzeichen voneinander trennen!"
 
 #: forum/forms/qanda.py:89
 #, python-format
