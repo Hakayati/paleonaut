@@ -48,7 +48,7 @@ $(function() {
                 }
 
                 if(data.length == 0) {
-                    relatedQuestionsDiv.html('<br /><br /><div align="center">No questions like this have been found.</div>');
+                    relatedQuestionsDiv.html('<br /><br /><div align="center">Keine ähnlichen Fragen gefunden.</div>');
                     return;
                 }
 
