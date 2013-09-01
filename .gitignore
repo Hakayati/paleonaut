@@ -36,3 +36,7 @@ nosetests.xml
 
 # rope project
 .ropeproject
+
+# osqa
+/osqa/cache/*
+/osqa/log/*
