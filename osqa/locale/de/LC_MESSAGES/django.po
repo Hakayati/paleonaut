@@ -5158,14 +5158,14 @@ msgstr "Bereits validiert"
 #: forum/skins/nuxeo/templates/auth/mail_validation.html:11
 #, python-format
 msgid "%(prefix)s Your email validation link %(app_name)s"
-msgstr " %(prefix)s Ihr E-Mail-Validierungs link %(app_name)s"
+	msgstr " %(prefix)s Ihr E-Mail-Validierungs link für %(app_name)s"
 
 #: forum/skins/default/templates/auth/mail_validation.html:14
 #: forum/skins/fresh/osqa-fresh-skin/templates/auth/mail_validation.html:14
 #: forum/skins/fresh/templates/auth/mail_validation.html:14
 #: forum/skins/nuxeo/templates/auth/mail_validation.html:14
 msgid "Please use the following link to help us verify your email address:"
-msgstr "bitte benutzen Sie den folgenden Link um ihre Email zu verifizieren"
+msgstr "bitte benutzen Sie den folgenden Link um ihre Email zu verifizieren:"
 
 #: forum/skins/default/templates/auth/mail_validation.html:16
 #: forum/skins/default/templates/auth/welcome_email.html:26
@@ -7503,14 +7503,14 @@ msgstr "Markdown Basics"
 #: forum/skins/default/templates/sidebar/markdown_help.html:6
 #: forum/skins/nuxeo/templates/sidebar/markdown_help.html:6
 msgid "*italic* or __italic__"
-msgstr "*kursic* oder __kursiv__"
+msgstr "*kursiv* oder __kursiv__"
 
 #: forum/skins/default/templates/sidebar/markdown_help.html:9
 #: forum/skins/fresh/osqa-fresh-skin/templates/sidebar/markdown_help.html:9
 #: forum/skins/fresh/templates/sidebar/markdown_help.html:9
 #: forum/skins/nuxeo/templates/sidebar/markdown_help.html:9
 msgid "**bold** or __bold__"
-msgstr "**Fett** oder __fett__"
+msgstr "**fett** oder __fett__"
 
 #: forum/skins/default/templates/sidebar/markdown_help.html:12
 #: forum/skins/fresh/osqa-fresh-skin/templates/sidebar/markdown_help.html:12
@@ -7573,7 +7573,7 @@ msgstr "erfahren Sie mehr über Markdown"
 #: forum/skins/fresh/templates/sidebar/recent_awards.html:4
 #: forum/skins/nuxeo/templates/sidebar/recent_awards.html:4
 msgid "Recent awards"
-msgstr "Jüngste Auszeichnungen"
+msgstr "neue Auszeichnungen"
 
 #: forum/skins/default/templates/sidebar/recent_awards.html:15
 #: forum/skins/fresh/osqa-fresh-skin/templates/sidebar/recent_awards.html:15
@@ -7654,7 +7654,7 @@ msgstr "Aktualisieren"
 #: forum/skins/nuxeo/templates/users/info.html:64
 #: forum/skins/nuxeo/templates/users/signature.html:8 forum/views/users.py:39
 msgid "reputation"
-msgstr "Ruf"
+msgstr "Karma"
 
 #: forum/skins/default/templates/users/info.html:28
 #: forum/skins/fresh/osqa-fresh-skin/templates/users/info.html:28
@@ -9011,17 +9011,15 @@ msgstr "Wir freuen uns auf Ihr Feedback! Vielleicht beim nächsten mal :-)"
 
 #: forum/views/readers.py:44
 msgid "Most <strong>recently updated</strong> questions"
-msgstr "die meisten <strong>kürzlich aktualisierten</strong> Fragen"
+msgstr "<strong>aktuellste</strong> Fragen"
 
 #: forum/views/readers.py:45
 msgid "most <strong>recently asked</strong> questions"
-msgstr "die meisten <strong>kürzlich eingestellten</strong> Fragen"
+msgstr "<strong>neueste</strong> Fragen"
 
 #: forum/views/readers.py:46
 msgid "most <strong>active</strong> questions in the last 24 hours</strong>"
-msgstr ""
-"die meisten <strong>aktiven</strong> Fragen in den letzten 24 Stunden</"
-"strong>"
+msgstr "<strong>aktive</strong> Fragen der letzten 24 Stunden</strong>"
 
 #: forum/views/readers.py:47
 msgid "mostvoted"
@@ -9029,7 +9027,7 @@ msgstr "abgestimmt"
 
 #: forum/views/readers.py:47
 msgid "most <strong>voted</strong> questions"
-msgstr "am meisten <strong>abgestimmte</strong> Fragen"
+msgstr "Fragen mit den meisten Stimmen"
 
 #: forum/views/readers.py:60 forum/views/readers.py:264
 #: forum/views/users.py:41 forum/views/users.py:52
@@ -9240,11 +9238,11 @@ msgstr "neueste Benutzeraktivitäten"
 
 #: forum/views/users.py:341
 msgid "reputation history"
-msgstr "Ruf Verlauf"
+msgstr "Karmagraph"
 
 #: forum/views/users.py:341
 msgid "graph of user karma"
-msgstr "Graph des Benutzer Karmas"
+msgstr "Kramagraph des Benutzers"
 
 #: forum/views/users.py:356
 msgid "user vote record"
