@@ -22,9 +22,9 @@ var products = [
     {name: 'Milchprodukte', id: 'milchprodukte'},
     {name: 'essen', id: 'essen'},
     {name: 'vegetarisch', id: 'vegetarisch'},
-    {name: 'Fittness', id: 'fittness'},
+    {name: 'Fitness', id: 'fitness'},
     {name: 'Protein', id: 'protein'},
-    {name: 'Gesundheit', id: 'Gesundheit'},
+    {name: 'Gesundheit', id: 'gesundheit'},
     {name: 'low-carb', id: 'low-carb'},
 ]
 var development_products = [
