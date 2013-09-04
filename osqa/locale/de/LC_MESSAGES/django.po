@@ -3824,7 +3824,7 @@ msgstr ""
 #: forum/skins/nuxeo/templates/markdown_help.html:49
 #: forum/skins/nuxeo/templates/markdown_help.html:52
 msgid "This is an H1"
-msgstr "Dies ist  H1"
+msgstr "Dies ist H1"
 
 #: forum/skins/default/templates/markdown_help.html:36
 #: forum/skins/default/templates/markdown_help.html:40
