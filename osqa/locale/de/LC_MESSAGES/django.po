@@ -3727,7 +3727,7 @@ msgstr "Benutzer"
 #: forum/skins/fresh/templates/index.html:11
 #: forum/skins/nuxeo/templates/index.html:11
 msgid "welcome to "
-msgstr "Willkommen zu "
+msgstr "Willkommen bei "
 
 #: forum/skins/default/templates/logout.html:6
 #: forum/skins/default/templates/logout.html:16
@@ -3824,7 +3824,7 @@ msgstr ""
 #: forum/skins/nuxeo/templates/markdown_help.html:49
 #: forum/skins/nuxeo/templates/markdown_help.html:52
 msgid "This is an H1"
-msgstr "Dies ist  H1"
+msgstr "Dies ist H1"
 
 #: forum/skins/default/templates/markdown_help.html:36
 #: forum/skins/default/templates/markdown_help.html:40
@@ -8412,15 +8412,15 @@ msgstr "Reputationspunkte"
 
 #: forum/templatetags/extra_tags.py:103
 msgid "%b %d at %H:%M"
-msgstr ""
+msgstr "%b %d um %H:%M"
 
 #: forum/templatetags/extra_tags.py:105
 msgid "%b %d '%y at %H:%M"
-msgstr ""
+msgstr "%b %d '%y um %H:%M"
 
 #: forum/templatetags/extra_tags.py:107
 msgid "2 days ago"
-msgstr "Vor 2 Tagen"
+msgstr "vor 2 Tagen"
 
 #: forum/templatetags/extra_tags.py:109
 msgid "yesterday"
