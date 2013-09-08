@@ -66,25 +66,6 @@
             </div>
         {% endfor %}
     </div>
-    <div id="smallicon_providers">
-        {% for provider in smallicon_providers %}
-            <div class="provider_logo small" name="{{ provider.id }}">
-                <div class="inner">
-                    {% ifequal provider.type "DIRECT" %}
-                        <a class="provider_direct" href="{% url auth_provider_signin provider=provider.id %}">
-                            <img src="{% media provider.icon %}" />
-                        </a>
-                    {% endifequal %}
-                    {% ifequal provider.type "CUSTOM" %}
-                        {% include provider.code_template %}
-                    {% endifequal %}
-                    {% ifequal provider.type "SIMPLE_FORM" %}
-                        <img alt="{{ provider.simple_form_context.your_what }}" class="simple_form_provider" src="{% media provider.icon %}" />
-                    {% endifequal %}
-                </div>
-            </div>
-        {% endfor %}
-    </div>
     <form name="signin_form" id="signin_form" class="signin_form" method="POST" action="">
         <div id="signin_form_slot"></div>
         <input type="hidden" class="validate_email" name="validate_email" value="yes" />
@@ -159,26 +140,5 @@
 {% endblock %}
 
 {% block sidebar %}
-<div class="boxC">
-    <h3 class="subtitle">{% trans "Why use OpenID?" %}</h3>
-    <ul class="list-item">
-        <li>
-		{% trans "with openid it is easier" %}
-        </li>
-        <li>
-		{% trans "reuse openid" %}
-        </li>
-        <li>
-		{% trans "openid is widely adopted" %}
-        </li>
-        <li>
-		{% trans "openid is supported open standard" %}
-        </li>
 
-    </ul>
-    <p class="info-box-follow-up-links">
-        <a href="http://openid.net/what/" target="_blank">{% trans "Find out more" %} </a><br/>
-        <a href="http://openid.net/get/" target="_blank">{% trans "Get OpenID" %} </a>
-    </p>
-</div>
 {% endblock%}
